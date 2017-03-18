@@ -1,0 +1,6 @@
+env <- readRDS("maacs_env.rds")
+str(env)
+gl <- gl(150,5)
+pdf(file = "plotlattice.pdf",width= 10,height=15)
+xyplot(log2(airmus)~VisitNum | gl,data= env)
+dev.off()
